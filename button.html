@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+.button{
+    font-family: Arial;
+    margin:auto;
+    width:130px;
+    text-align: center;
+    font-size: 17px;
+    border: 1px solid grey;
+    cursor: pointer;
+    background: black;
+}
+
+.button a{
+  text-decoration: none;
+}
+
+.button-icon {
+  float: left;
+  width: 10%;
+  padding: 10px;
+  color: white;
+ 
+}
+
+.button-icon:empty { 
+  grid-area: HEADER; 
+  display: none;
+}
+
+.button-text {
+    padding: 10px; 
+    color: red;
+
+  }
+
+  
+.button:hover {
+  background:grey;
+}
+
+.button::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+</style>
+</head>
+<body>
+  
+
+<div class="button">
+    <a href="">
+        <div class="button-icon"><i class="fa fa-search"></i></div>
+        <div class="button-text">jkl</div>
+    </a>
+</div>
+
+<div class="button-create">bjk</div>
+
+<script>
+  var btn_text = document.getElementsByClassName("button-text")[0];
+  btn_text.innerHTML = "Helljoijio!";
+  btn_text.style.color = "green";
+  btn_text.style.backgroundColor ="black";
+
+
+  var a = document.getElementsByClassName("button-create")[0];
+  a.innerHTML = "<div class="button">
+    <a href="">
+        <div class="button-icon"><i class="fa fa-search"></i></div>
+        <div class="button-text">jkl</div>
+    </a>
+</div>";
+  a.style.color = "blue";
+  a.backgroundColor ="black";
+  </script> 
+
+</body>
+</html> 
